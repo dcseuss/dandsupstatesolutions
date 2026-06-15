@@ -74,6 +74,11 @@ body {
   margin-bottom: 20px;
 }
 
+/* Make each line behave like text so the hero centers properly */
+.hero h1 div {
+  display: inline-block;
+}
+
 /* FINAL — CORRECT COLOR RULES FOR ALL FOUR LINES */
 .hero .line-1 {
   color: #ff621f;      /* orange */
