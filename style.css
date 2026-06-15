@@ -60,7 +60,6 @@ body {
   position: absolute;
   inset: 0;
   background: url("assets/hero.jpg") center/cover no-repeat;
-
   opacity: 0.35;
   z-index: -1;
 }
@@ -69,19 +68,31 @@ body {
   max-width: 600px;
 }
 
+/* UPDATED HERO COLORS + SIZES */
 .hero h1 {
-  font-size: 48px;
-  font-weight: bold;
+  font-size: 32px;          /* smaller company name */
+  font-weight: 600;
+  color: #f7931e;           /* orange company name */
   margin-bottom: 20px;
 }
 
 .hero h1 span {
-  color: #f7931e;
+  display: block;
+  font-size: 72px;          /* large main headline */
+  font-weight: 900;
+  color: #ffffff;           /* white for Engineered + Pallet */
+  line-height: 1.05;
+}
+
+/* “Solutions.” – different orange */
+.hero h1 span strong {
+  color: #f5b25a;
 }
 
 .hero-sub {
-  font-size: 18px;
+  font-size: 20px;          /* slightly larger */
   margin-bottom: 30px;
+  color: #cccccc;           /* gray subtext */
 }
 
 .btn {
