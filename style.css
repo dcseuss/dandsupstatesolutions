@@ -413,3 +413,36 @@ p {
     gap: 16px;
   }
 }
+/* -----------------------------------------------------------
+   S-02 ENGINEERING FEATURE GRID
+   ----------------------------------------------------------- */
+
+.engineering-features {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+.engineering-feature h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.engineering-feature p {
+  font-size: 0.95rem;
+}
+
+.engineering-image {
+  width: 100%;
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius);
+  object-fit: cover;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .engineering-features {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
