@@ -1,238 +1,225 @@
-/* -----------------------------------------------------------
-   FONT IMPORTS
-   ----------------------------------------------------------- */
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>D&S Upstate Solutions</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
+<!-- NAV -->
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="logo">
+      <div class="logo-box">D&S</div>
+      <span class="logo-text">UPSTATE SOLUTIONS</span>
+    </div>
 
-/* -----------------------------------------------------------
-   ROOT VARIABLES (Base44 color system + fonts)
-   ----------------------------------------------------------- */
-:root {
-  --background: 210 6% 11%;
-  --foreground: 0 0% 96%;
-  --card: 210 5% 15%;
-  --card-foreground: 0 0% 96%;
-  --popover: 210 5% 15%;
-  --popover-foreground: 0 0% 96%;
-  --primary: 18 100% 56%; /* #ff621f */
-  --primary-foreground: 210 6% 11%;
-  --secondary: 210 5% 21%;
-  --secondary-foreground: 0 0% 96%;
-  --muted: 210 5% 18%;
-  --muted-foreground: 210 5% 55%;
-  --accent: 210 22% 25%;
-  --accent-foreground: 0 0% 96%;
-  --border: 210 5% 22%;
-  --input: 210 5% 22%;
-  --ring: 18 100% 56%;
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">HOME</a></li>
+      <li><a href="about.html">ABOUT</a></li>
+      <li><a href="pallet-services.html">PALLET SERVICES</a></li>
+      <li><a href="logistics.html">LOGISTICS</a></li>
+      <li><a href="engineering.html">ENGINEERING</a></li>
+      <li><a href="reclaimiq.html">RECLAIMIQ</a></li>
+      <li><a href="contact.html">CONTACT</a></li>
+    </ul>
+  </div>
+</nav>
 
-  --font-heading: 'Oswald', ui-sans-serif, system-ui, sans-serif;
-  --font-display: 'Oswald', ui-sans-serif, system-ui, sans-serif;
-  --font-body: 'Inter', ui-sans-serif, system-ui, sans-serif;
-  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+<!-- HERO -->
+<section class="hero">
+  <img 
+    src="https://media.base44.com/images/public/6a2c5aabd7da46b2db1a3d7a/89b43dc96_generated_0d5d4765.png"
+    alt="Industrial pallet warehouse"
+    class="hero-bg"
+  />
+  <div class="hero-overlay"></div>
 
-  --overlay-left: 1;
-  --overlay-middle: 0.9;
-  --overlay-right: 0.6;
+  <div class="container hero-inner">
+    <div class="hero-content">
+      <span class="mono hero-kicker">
+        D&S UPSTATE SOLUTIONS
+      </span>
 
-  --radius: 0px;
-}
+      <h1 class="hero-title">
+        Engineered<br />
+        Pallet<br />
+        <span class="hero-title-accent">Solutions.</span>
+      </h1>
 
+      <p class="hero-subtitle">
+        Built for strength, safety, and reliability. Pallets are our core business — engineering makes them better.
+      </p>
 
-/* -----------------------------------------------------------
-   GLOBAL RESET + BASE STYLES
-   ----------------------------------------------------------- */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  border-color: hsl(var(--border));
-}
+      <div class="hero-actions">
+        <a href="/pallet-services" class="btn-primary">OUR SERVICES</a>
+        <a href="/contact" class="btn-outline">GET A QUOTE</a>
+      </div>
+    </div>
+  </div>
 
-body {
-  background: hsl(var(--background));
-  color: hsl(var(--foreground));
-  font-family: var(--font-body);
-  line-height: 1.6;
-}
+  <div class="hero-scroll-indicator"></div>
+</section>
 
+<!-- METRICS ROW (ABOVE S-01) -->
+<section class="section metrics-section">
+  <div class="container metrics-grid">
+    <div class="metric">
+      <div class="metric-value">1.2M+</div>
+      <div class="metric-label">PALLETS RECLAIMED</div>
+    </div>
+    <div class="metric">
+      <div class="metric-value">0.001"</div>
+      <div class="metric-label">ENGINEERING TOLERANCE</div>
+    </div>
+    <div class="metric">
+      <div class="metric-value">500+</div>
+      <div class="metric-label">MILE SERVICE RADIUS</div>
+    </div>
+    <div class="metric">
+      <div class="metric-value">24HR</div>
+      <div class="metric-label">TURNAROUND AVAILABLE</div>
+    </div>
+  </div>
+</section>
 
-/* -----------------------------------------------------------
-   TYPOGRAPHY
-   ----------------------------------------------------------- */
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-display);
-  color: hsl(var(--foreground));
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
-}
+<!-- S-01 CORE SERVICES -->
+<section class="section">
+  <div class="container">
+    <span class="section-label mono">S-01 CORE SERVICES</span>
+    <div class="section-header">
+      <h2 class="section-title">WHAT WE DO</h2>
+      <p class="section-description">
+        Full-service pallet operations from pickup to delivery, supported by engineering precision and reliable logistics.
+      </p>
+    </div>
 
-p {
-  font-family: var(--font-body);
-  color: hsl(var(--muted-foreground));
-}
+    <div class="services-grid">
+      <div class="service-card">
+        <h3 class="service-title">01. PALLET PICKUP & RECYCLING</h3>
+        <p class="service-text">
+          Scheduled and on-demand pickup, sorting, grading, and recycling pallets to maximize value and minimize waste.
+        </p>
+      </div>
+      <div class="service-card">
+        <h3 class="service-title">02. REPAIR & MANUFACTURING</h3>
+        <p class="service-text">
+          From structural repairs to full custom builds, ensuring every pallet meets load-tested, engineer-verified standards.
+        </p>
+      </div>
+      <div class="service-card">
+        <h3 class="service-title">03. LOGISTICS SUPPORT</h3>
+        <p class="service-text">
+          Hot-shot delivery, regional freight, and contract hauling, CDL-licensed and compliance-ready.
+        </p>
+      </div>
+      <div class="service-card">
+        <h3 class="service-title">04. ENGINEERING & DESIGN</h3>
+        <p class="service-text">
+          3D modeling, FEA analysis, and custom pallet design, focusing on engineering that strengthens every pallet.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
-.mono {
-  font-family: var(--font-mono);
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-}
+<!-- S-02 ENGINEERING -->
+<section class="section section-alt">
+  <div class="container engineering-grid">
+    <div class="engineering-text">
+      <span class="section-label mono">S-02 ENGINEERING</span>
+      <h2 class="section-title">WHY ENGINEERING MATTERS</h2>
+      <p class="section-description">
+        Precision engineering ensures every pallet is designed for the loads it carries, the environments it operates in, and the safety standards it must meet.
+      </p>
+      <p class="section-description">
+        By applying structural analysis, material science, and real-world testing, we reduce failures, extend pallet life, and protect both products and people.
+      </p>
+    </div>
+    <div class="engineering-media">
+      <!-- Placeholder block for image/diagram -->
+      <div class="engineering-placeholder border">
+        ENGINEERING VISUAL
+      </div>
+    </div>
+  </div>
+</section>
 
+<!-- S-03 RECLAIMIQ -->
+<section class="section">
+  <div class="container">
+    <span class="section-label mono">S-03 RECLAIMIQ</span>
+    <div class="section-header">
+      <h2 class="section-title">RECLAIMIQ WORKFLOW</h2>
+      <p class="section-description">
+        ReclaimIQ tracks pallet movement, condition, and value across your network, turning reclaimed inventory into a measurable asset.
+      </p>
+    </div>
 
-/* -----------------------------------------------------------
-   BUTTONS
-   ----------------------------------------------------------- */
-.btn-primary {
-  background: hsl(var(--primary));
-  color: hsl(var(--primary-foreground));
-  padding: 1rem 2rem;
-  border: 2px solid hsl(var(--primary));
-  font-family: var(--font-display);
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  transition: 0.2s ease;
-}
+    <div class="reclaim-grid">
+      <div class="reclaim-step">
+        <h3 class="service-title">01. INTAKE & TAGGING</h3>
+        <p class="service-text">
+          Pallets are scanned, tagged, and logged into the system with condition, origin, and destination data.
+        </p>
+      </div>
+      <div class="reclaim-step">
+        <h3 class="service-title">02. GRADING & ROUTING</h3>
+        <p class="service-text">
+          Each pallet is graded and routed to repair, reuse, or recycling based on engineering and economic thresholds.
+        </p>
+      </div>
+      <div class="reclaim-step">
+        <h3 class="service-title">03. REPORTING & OPTIMIZATION</h3>
+        <p class="service-text">
+          Real-time dashboards show reclaimed value, waste reduction, and performance across sites and lanes.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
-.btn-primary:hover {
-  background: hsla(var(--primary), 0.9);
-}
+<!-- S-04 SERVICE AREA -->
+<section class="section section-alt">
+  <div class="container service-area-grid">
+    <div class="service-area-text">
+      <span class="section-label mono">S-04 SERVICE AREA</span>
+      <h2 class="section-title">WHERE WE OPERATE</h2>
+      <p class="section-description">
+        D&S Upstate Solutions provides pallet, logistics, and engineering support across a 500+ mile service radius, covering key industrial and distribution hubs.
+      </p>
+      <p class="section-description">
+        Our network is built for fast response, consistent coverage, and reliable turnaround times, aligned with your production and shipping schedules.
+      </p>
+    </div>
+    <div class="service-area-media">
+      <div class="service-area-placeholder border">
+        SERVICE AREA MAP
+      </div>
+    </div>
+  </div>
+</section>
 
-.btn-outline {
-  background: transparent;
-  color: hsl(var(--foreground));
-  padding: 1rem 2rem;
-  border: 2px solid hsl(var(--border));
-  font-family: var(--font-display);
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  transition: 0.2s ease;
-}
+<!-- SIMPLE FOOTER -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <span class="mono footer-brand">D&S UPSTATE SOLUTIONS</span>
+    <span class="footer-text">Engineered pallet operations, logistics, and reclaim intelligence.</span>
+  </div>
+</footer>
 
-.btn-outline:hover {
-  background: hsl(var(--secondary));
-}
+<script>
+  window.addEventListener("scroll", function () {
+    const nav = document.querySelector(".navbar");
+    if (window.scrollY > 20) {
+      nav.classList.add("scrolled");
+    } else {
+      nav.classList.remove("scrolled");
+    }
+  });
+</script>
 
-
-/* -----------------------------------------------------------
-   HERO OVERLAY (Base44 gradient)
-   ----------------------------------------------------------- */
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to right,
-    hsla(210, 6%, 11%, var(--overlay-left)),
-    hsla(210, 6%, 11%, var(--overlay-middle)),
-    hsla(210, 6%, 11%, var(--overlay-right))
-  );
-  pointer-events: none;
-}
-
-
-/* -----------------------------------------------------------
-   LAYOUT CONTAINERS
-   ----------------------------------------------------------- */
-.container {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
-}
-
-.section {
-  padding: 6rem 0;
-}
-
-
-/* -----------------------------------------------------------
-   UTILITY CLASSES
-   ----------------------------------------------------------- */
-.text-primary {
-  color: hsl(var(--primary));
-}
-
-.bg-primary {
-  background: hsl(var(--primary));
-}
-
-.border {
-  border: 1px solid hsl(var(--border));
-}
-
-
-/* -----------------------------------------------------------
-   BASE44 NAVIGATION BAR (NEW)
-   ----------------------------------------------------------- */
-
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  padding: 18px 0;
-  transition: background-color 0.3s ease, padding 0.3s ease;
-  z-index: 999;
-  background-color: transparent;
-}
-
-.navbar.scrolled {
-  background-color: #0d0d0d;
-  padding: 12px 0;
-}
-
-.nav-container {
-  width: 90%;
-  max-width: 1400px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* LOGO */
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.logo-box {
-  border: 2px solid #ff621f;
-  color: #ff621f;
-  padding: 6px 10px;
-  font-size: 18px;
-  font-weight: 700;
-  font-family: var(--font-display);
-  letter-spacing: 1px;
-}
-
-.logo-text {
-  color: #ffffff;
-  font-size: 18px;
-  font-weight: 600;
-  font-family: var(--font-display);
-  letter-spacing: 1px;
-}
-
-/* NAV LINKS */
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 32px;
-}
-
-.nav-links a {
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 15px;
-  font-weight: 600;
-  font-family: var(--font-display);
-  letter-spacing: 1px;
-  transition: color 0.2s ease;
-}
-
-.nav-links a:hover {
-  color: #ff621f;
-}
-
-.nav-links .active {
-  color: #ff621f;
-}
+</body>
+</html>
