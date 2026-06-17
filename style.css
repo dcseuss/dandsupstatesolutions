@@ -295,7 +295,7 @@ p {
 .service-card {
   padding: 1.5rem;
   background: hsl(var(--card));
-  border-radius: var(--radius);
+  border-radius: var(--radius));
 }
 
 .service-title {
@@ -309,7 +309,7 @@ p {
 
 
 /* -----------------------------------------------------------
-   S-02 ENGINEERING
+   S-02 ENGINEERING (UPDATED TO BASE44 EXACT)
    ----------------------------------------------------------- */
 
 .section-alt {
@@ -318,18 +318,50 @@ p {
 
 .engineering-grid {
   display: grid;
-  grid-template-columns: minmax(0, 2fr) minmax(0, 1.5fr);
-  gap: 3rem;
-  align-items: center;
+  grid-template-columns: 1.1fr 0.9fr; /* Base44 55/45 split */
+  gap: 2.5rem;
+  align-items: flex-start;
 }
 
-.engineering-placeholder {
-  height: 220px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: hsl(var(--muted-foreground));
-  font-family: var(--font-mono);
+.engineering-text .section-header {
+  max-width: 520px;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+}
+
+.engineering-text .section-description {
+  margin-top: 0.65rem;
+}
+
+.engineering-image {
+  width: 100%;
+  height: 340px; /* Base44 taller image */
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius);
+  object-fit: cover;
+}
+
+
+/* -----------------------------------------------------------
+   S-02 ENGINEERING FEATURE GRID
+   ----------------------------------------------------------- */
+
+.engineering-features {
+  margin-top: 1.75rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.engineering-feature h3 {
+  font-size: 0.9rem;
+  margin-bottom: 0.35rem;
+}
+
+.engineering-feature p {
+  font-size: 0.9rem;
+  line-height: 1.5;
 }
 
 
@@ -337,11 +369,93 @@ p {
    S-03 RECLAIMIQ
    ----------------------------------------------------------- */
 
+.reclaim-section {
+  background: hsl(var(--background));
+}
+
 .reclaim-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 2rem;
+  grid-template-columns: 1.1fr 0.9fr; /* Base44 55/45 split */
+  gap: 2.5rem;
+  align-items: flex-start;
 }
+
+.reclaim-text .section-header {
+  max-width: 520px; /* Base44 narrow text column */
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+}
+
+.reclaim-text .section-description {
+  margin-top: 0.65rem; /* tighter Base44 spacing */
+}
+
+.reclaim-steps {
+  margin-top: 1.75rem;
+  display: grid;
+  gap: 1.25rem; /* Base44 tight step spacing */
+}
+
+.reclaim-step {
+  display: flex;
+  flex-direction: column;
+}
+
+.reclaim-step-number {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  color: hsl(var(--primary));
+  margin-bottom: 0.25rem;
+}
+
+.reclaim-step-title {
+  font-size: 1rem;
+  font-family: var(--font-display);
+  margin-bottom: 0.35rem;
+}
+
+.reclaim-step-text {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: hsl(var(--muted-foreground));
+}
+
+.reclaim-image {
+  width: 100%;
+  height: 340px; /* Base44 tall image */
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius);
+  object-fit: cover;
+  object-position: center;
+}
+
+.reclaim-link {
+  margin-top: 1.5rem;
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: hsl(var(--primary));
+  text-decoration: none;
+}
+
+.reclaim-link:hover {
+  opacity: 0.8;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .reclaim-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .reclaim-image {
+    height: 260px;
+  }
+}
+
 
 
 /* -----------------------------------------------------------
@@ -412,36 +526,7 @@ p {
   .nav-links {
     gap: 16px;
   }
-}
-/* -----------------------------------------------------------
-   S-02 ENGINEERING FEATURE GRID
-   ----------------------------------------------------------- */
 
-.engineering-features {
-  margin-top: 2rem;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 2rem;
-}
-
-.engineering-feature h3 {
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
-}
-
-.engineering-feature p {
-  font-size: 0.95rem;
-}
-
-.engineering-image {
-  width: 100%;
-  border: 1px solid hsl(var(--border));
-  border-radius: var(--radius);
-  object-fit: cover;
-}
-
-/* Responsive */
-@media (max-width: 900px) {
   .engineering-features {
     grid-template-columns: minmax(0, 1fr);
   }
