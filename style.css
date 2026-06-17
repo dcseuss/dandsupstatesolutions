@@ -307,7 +307,90 @@ p {
   font-size: 0.95rem;
 }
 
-/* Responsive tweaks */
+
+/* -----------------------------------------------------------
+   S-02 ENGINEERING
+   ----------------------------------------------------------- */
+
+.section-alt {
+  background: hsl(var(--card));
+}
+
+.engineering-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1.5fr);
+  gap: 3rem;
+  align-items: center;
+}
+
+.engineering-placeholder {
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: hsl(var(--muted-foreground));
+  font-family: var(--font-mono);
+}
+
+
+/* -----------------------------------------------------------
+   S-03 RECLAIMIQ
+   ----------------------------------------------------------- */
+
+.reclaim-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+
+/* -----------------------------------------------------------
+   S-04 SERVICE AREA
+   ----------------------------------------------------------- */
+
+.service-area-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1.5fr);
+  gap: 3rem;
+  align-items: center;
+}
+
+.service-area-placeholder {
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: hsl(var(--muted-foreground));
+  font-family: var(--font-mono);
+}
+
+
+/* -----------------------------------------------------------
+   FOOTER
+   ----------------------------------------------------------- */
+
+.footer {
+  padding: 2rem 0;
+  background: hsl(210, 6%, 9%);
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-text {
+  font-size: 0.85rem;
+  color: hsl(var(--muted-foreground));
+}
+
+
+/* -----------------------------------------------------------
+   RESPONSIVE
+   ----------------------------------------------------------- */
+
 @media (max-width: 900px) {
   .metrics-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -315,5 +398,18 @@ p {
 
   .services-grid {
     grid-template-columns: minmax(0, 1fr);
+  }
+
+  .engineering-grid,
+  .service-area-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .reclaim-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .nav-links {
+    gap: 16px;
   }
 }
