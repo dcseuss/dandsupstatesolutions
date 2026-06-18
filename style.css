@@ -653,3 +653,77 @@ p {
     grid-template-columns: minmax(0, 1fr);
   }
 }
+
+/* -----------------------------------------------------------
+   BASE44 MOBILE OPTIMIZATION PACK
+   ----------------------------------------------------------- */
+
+@media (max-width: 900px) {
+
+  /* Global section spacing */
+  .section {
+    padding: 3.5rem 0;
+  }
+
+  /* Section headers */
+  .section-header {
+    margin-bottom: 1.25rem;
+  }
+
+  /* S-02 Engineering */
+  .engineering-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .engineering-image {
+    height: 260px;
+  }
+
+  /* S-03 ReclaimIQ */
+  .reclaim-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .reclaim-image {
+    height: 260px;
+  }
+
+  .reclaim-steps {
+    gap: 1rem;
+  }
+
+  /* S-04 Service Area */
+  .service-area-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .service-area-box {
+    margin-top: 1.5rem;
+  }
+
+  /* CTA */
+  .cta-title {
+    font-size: 1.6rem;
+  }
+
+  .cta-description {
+    font-size: 0.95rem;
+  }
+
+  .cta-button {
+    padding: 1rem 2rem;
+  }
+
+  /* Footer */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-col {
+    text-align: left;
+  }
+}
