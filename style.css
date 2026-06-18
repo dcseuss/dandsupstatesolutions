@@ -462,20 +462,84 @@ p {
    S-04 SERVICE AREA
    ----------------------------------------------------------- */
 
-.service-area-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 2fr) minmax(0, 1.5fr);
-  gap: 3rem;
-  align-items: center;
+.service-area-section {
+  background: hsl(var(--card));
 }
 
-.service-area-placeholder {
-  height: 220px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: hsl(var(--muted-foreground));
+.service-area-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr; /* Base44 55/45 split */
+  gap: 2.5rem;
+  align-items: flex-start;
+}
+
+.service-area-text .section-header {
+  max-width: 520px; /* Base44 narrow text column */
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+}
+
+.service-area-text .section-description {
+  margin-top: 0.65rem; /* tighter Base44 spacing */
+}
+
+.service-area-list {
+  margin-top: 1.75rem;
+  display: grid;
+  gap: 0.75rem; /* Base44 tight list spacing */
+}
+
+.service-area-list li {
+  font-size: 0.95rem;
+  color: hsl(var(--foreground));
+  list-style: none;
+  position: relative;
+  padding-left: 1.25rem;
+}
+
+.service-area-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: hsl(var(--primary));
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.service-area-box {
+  background: hsl(var(--background));
+  border: 1px solid hsl(var(--border));
+  padding: 1.75rem;
+  border-radius: var(--radius);
+  display: grid;
+  gap: 1.25rem;
+}
+
+.service-area-box h4 {
+  font-size: 0.9rem;
   font-family: var(--font-mono);
+  letter-spacing: 0.15em;
+  color: hsl(var(--primary));
+  margin-bottom: 0.35rem;
+}
+
+.service-area-box p {
+  font-size: 0.95rem;
+  color: hsl(var(--foreground));
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .service-area-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .service-area-box {
+    margin-top: 1.5rem;
+  }
 }
 
 
